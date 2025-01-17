@@ -1,0 +1,12 @@
+package org.vw.qa.Enum;
+
+	public enum ConfigProperties {
+	
+	URL,
+	BROWSER,
+	OVERRIDEREPORTS,
+	PASSSTEPSCREENSHOTS,
+	FAILEDSTEPSCREENSHOTS,
+	SKIPPEDSTEPSCREENSHOTS,
+
+}
