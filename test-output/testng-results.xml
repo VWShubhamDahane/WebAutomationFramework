@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-13T15:44:54 IST" name="Suite" finished-at="2025-01-13T15:44:57 IST" duration-ms="3497">
+    <groups>
+    </groups>
+    <test started-at="2025-01-13T15:44:54 IST" name="Test" finished-at="2025-01-13T15:44:57 IST" duration-ms="3497">
+      <class name="org.vw.qa.Testcases.RestTest">
+        <test-method signature="createAirline()[pri:0, instance:org.vw.qa.Testcases.RestTest@5b1669c0]" started-at="2025-01-13T15:44:54 IST" name="createAirline" finished-at="2025-01-13T15:44:57 IST" duration-ms="3186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAirline -->
+      </class> <!-- org.vw.qa.Testcases.RestTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
