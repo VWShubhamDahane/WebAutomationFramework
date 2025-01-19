@@ -8,7 +8,7 @@
     <classes>
       <class name="org.vw.qa.Testcases.RestTest">
         <methods>
-          <include name="getCompanyConsumers"/>
+          <include name="createAirline"/>
         </methods>
       </class> <!-- org.vw.qa.Testcases.RestTest -->
     </classes>

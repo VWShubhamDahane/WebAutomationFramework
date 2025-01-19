@@ -25,10 +25,10 @@ public class RestTest {
    //  String payload= Payload.getCreateAirlinePayloadFromString("1223456767","Shubham Airways","fg","https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/sri_lanka.png",
       //       "From Sri Lanka","From Sri Lanka","www.srilankaaairways.com","1998");
         //--Using Map
-        Map<String, Object> payload=Payload.getCreateAirlinePayloadFromMap("12237","Shubham Airways","fg","https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/sri_lanka.png",
+        Map<String, Object> payload=Payload.getCreateAirlinePayloadFromMap("122231437","Shubham Airways","fg","https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/sri_lanka.png",
         	           "From Sri Lanka","From Sri Lanka","www.srilankaaairways.com","1998");
      Response response = RestUtils.performPost(Endpoint,payload,new HashMap<>());
-    Assert.assertEquals(response.statusCode(),200);
+    Assert.assertEquals(response.statusCode(),201);
 
     }
 
