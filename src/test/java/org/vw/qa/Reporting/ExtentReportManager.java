@@ -47,6 +47,9 @@ public class ExtentReportManager {
     public static void logExceptionDetails(String log) {
         setup.extentTest.get().fail(log);
     }
+    public static void logIncollapsExpand(String log) {
+        setup.extentTest.get().info(log);
+    }
     public static  void logInfoDetails(String log){
         setup.extentTest.get().info(MarkupHelper.createLabel(log, ExtentColor.GREY));
 
@@ -55,8 +58,17 @@ public class ExtentReportManager {
         setup.extentTest.get().warning(MarkupHelper.createLabel(log, ExtentColor.YELLOW));
 
     }
-    public static void logJson(String json) {
-        setup.extentTest.get().info(MarkupHelper.createCodeBlock(json, CodeLanguage.JSON));
+    public static void logJson(String json) {    	
+        String jsonString = json.toString();   
+      String  stackTrace = jsonString.replaceAll(",", "<br>");
+                String formmatedResponse = "<details>\n" +
+                        "    <summary>Click Here To See the Json Response</summary>\n" +
+                        "    " + stackTrace + "\n" +
+                        "</details>\n";
+                ExtentReportManager.logIncollapsExpand(formmatedResponse);
+             
+        //setup.extentTest.get().info(MarkupHelper.createCodeBlock(jsonString, CodeLanguage.JSON));
+
     }
     public static void logHeaders(List<Header> headersList) {
 

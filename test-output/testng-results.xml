@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-19T07:26:13 IST" name="Suite" finished-at="2025-01-19T07:26:16 IST" duration-ms="3266">
+  <suite started-at="2025-01-21T13:34:26 IST" name="Suite" finished-at="2025-01-21T13:34:31 IST" duration-ms="4376">
     <groups>
     </groups>
-    <test started-at="2025-01-19T07:26:13 IST" name="Test" finished-at="2025-01-19T07:26:16 IST" duration-ms="3266">
+    <test started-at="2025-01-21T13:34:26 IST" name="Test" finished-at="2025-01-21T13:34:31 IST" duration-ms="4376">
       <class name="org.vw.qa.Testcases.RestTest">
-        <test-method signature="createAirline()[pri:0, instance:org.vw.qa.Testcases.RestTest@5b1669c0]" started-at="2025-01-19T07:26:13 IST" name="createAirline" finished-at="2025-01-19T07:26:16 IST" duration-ms="2995" status="FAIL">
+        <test-method signature="createAirline()[pri:0, instance:org.vw.qa.Testcases.RestTest@5b1669c0]" started-at="2025-01-21T13:34:27 IST" name="createAirline" finished-at="2025-01-21T13:34:31 IST" duration-ms="3822" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [201] but found [200]]]>

@@ -28,12 +28,12 @@ public class RestUtils {
 
     private static void printRequestLogInReport(RequestSpecification requestSpecification) {
         QueryableRequestSpecification queryableRequestSpecification = SpecificationQuerier.query(requestSpecification);
-        ExtentReportManager.logInfoDetails("Endpoint " + queryableRequestSpecification.getBaseUri());
-        ExtentReportManager.logInfoDetails("Method " + queryableRequestSpecification.getMethod());
-        ExtentReportManager.logInfoDetails("Headers are ");
+        ExtentReportManager.logInfoDetails("Endpoint :- " + queryableRequestSpecification.getBaseUri());
+        ExtentReportManager.logInfoDetails("Method :- " + queryableRequestSpecification.getMethod());
+        ExtentReportManager.logInfoDetails("Request Headers are ");
         ExtentReportManager.logHeaders(queryableRequestSpecification.getHeaders().asList());
         ExtentReportManager.logInfoDetails("Request body is ");
-        ExtentReportManager.logJson(queryableRequestSpecification.getBody());
+       ExtentReportManager.logJson(queryableRequestSpecification.getBody());
 
     }
     
@@ -41,7 +41,7 @@ public class RestUtils {
         ExtentReportManager.logInfoDetails("Response status code is :-  " + response.getStatusCode());
         ExtentReportManager.logInfoDetails("Response Headers are ");
         ExtentReportManager.logHeaders(response.getHeaders().asList());
-        ExtentReportManager.logInfoDetails("Response body is ");
+        ExtentReportManager.logInfoDetails("Response body is :- ");
         ExtentReportManager.logJson(response.getBody().prettyPrint());
     }
     
