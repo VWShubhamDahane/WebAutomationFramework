@@ -28,16 +28,21 @@ public class RestUtils {
 
     private static void printRequestLogInReport(RequestSpecification requestSpecification) {
         QueryableRequestSpecification queryableRequestSpecification = SpecificationQuerier.query(requestSpecification);
-        ExtentReportManager.logInfoDetails("Endpoint " + queryableRequestSpecification.getBaseUri());
-        ExtentReportManager.logInfoDetails("Method " + queryableRequestSpecification.getMethod());
-        ExtentReportManager.logInfoDetails("Header :-  " + queryableRequestSpecification.getHeaders().asList().toString());
-        ExtentReportManager.logInfoDetails("Request Body is  " + queryableRequestSpecification.getBody());
+        ExtentReportManager.logInfoDetails("Endpoint :- " + queryableRequestSpecification.getBaseUri());
+        ExtentReportManager.logInfoDetails("Method :- " + queryableRequestSpecification.getMethod());
+        ExtentReportManager.logInfoDetails("Request Headers are ");
+        ExtentReportManager.logHeaders(queryableRequestSpecification.getHeaders().asList());
+        ExtentReportManager.logInfoDetails("Request body is ");
+       ExtentReportManager.logJson(queryableRequestSpecification.getBody());
+
     }
     
     private static void printResponseLogInReport(Response response) {
         ExtentReportManager.logInfoDetails("Response status code is :-  " + response.getStatusCode());
-        ExtentReportManager.logInfoDetails("Headers is :-  " + response.getHeaders().asList().toString());
-        ExtentReportManager.logInfoDetails("Response body is :-  " + response.getBody());
+        ExtentReportManager.logInfoDetails("Response Headers are ");
+        ExtentReportManager.logHeaders(response.getHeaders().asList());
+        ExtentReportManager.logInfoDetails("Response body is :- ");
+        ExtentReportManager.logJson(response.getBody().prettyPrint());
     }
     
     public static Response performPostnew(String endpoint, String payload, Map<String, String> headers) {
